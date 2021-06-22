@@ -36,7 +36,7 @@ if (process.env.NODE_ENV === "development") {
 // Cors middleware
 app.use(
   cors({
-    origin: ["http://localhost:3000", "http://192.168.10.147:3000"],
+    origin: [`${process.env.WEBSITE1}`, `${process.env.WEBSITE2}`],
     credentials: true,
   })
 );
