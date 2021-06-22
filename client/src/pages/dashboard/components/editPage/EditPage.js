@@ -25,25 +25,25 @@ const EditPage = ({ id }) => {
     user: "",
   });
 
-  const fetchSpecificStory = async () => {
-    try {
-      const res = await axios.get(`http://localhost:5000/stories/edit/${id}`);
+  // const fetchSpecificStory = async () => {
+  //   try {
+  //     const res = await axios.get(`http://localhost:5000/stories/edit/${id}`);
 
-      setStory((prevState) => ({
-        ...prevState,
-        loading: false,
-      }));
+  //     setStory((prevState) => ({
+  //       ...prevState,
+  //       loading: false,
+  //     }));
 
-      setEditForm(() => ({
-        title: res.data.title,
-        status: res.data.status,
-        story: res.data.story,
-        user: res.data.user,
-      }));
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  //     setEditForm(() => ({
+  //       title: res.data.title,
+  //       status: res.data.status,
+  //       story: res.data.story,
+  //       user: res.data.user,
+  //     }));
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
   const handleFormChange = (e) => {
     setEditForm((prevState) => ({
@@ -92,8 +92,27 @@ const EditPage = ({ id }) => {
   };
 
   useEffect(() => {
+    const fetchSpecificStory = async () => {
+      try {
+        const res = await axios.get(`http://localhost:5000/stories/edit/${id}`);
+
+        setStory((prevState) => ({
+          ...prevState,
+          loading: false,
+        }));
+
+        setEditForm(() => ({
+          title: res.data.title,
+          status: res.data.status,
+          story: res.data.story,
+          user: res.data.user,
+        }));
+      } catch (error) {
+        console.log(error);
+      }
+    };
     fetchSpecificStory();
-  }, []);
+  }, [id]);
 
   const formSelectOptions = [
     {

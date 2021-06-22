@@ -1,10 +1,10 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useState, useContext } from "react";
 import "./dashboardCard.scss";
 import { IoPerson } from "react-icons/io5";
 import axios from "axios";
 import { MdModeEdit, MdDelete } from "react-icons/md";
-import { AiOutlineRead } from "react-icons/ai";
-import { useRef } from "react";
+// import { AiOutlineRead } from "react-icons/ai";
+// import { useRef } from "react";
 import { Link } from "react-router-dom";
 import Modal from "../../../../components/modal/Modal";
 import DeleteModal from "../deleteModal/DeleteModal";
@@ -15,11 +15,11 @@ const DashboardCard = ({ data }) => {
   const store = useContext(myContext);
   const { userData } = store;
 
-  const paragraph = useRef();
-  const [storyData, setStoryData] = useState({
-    above50: false,
-    displayedData: "",
-  });
+  // const paragraph = useRef();
+  // const [storyData, setStoryData] = useState({
+  //   above50: false,
+  //   displayedData: "",
+  // });
 
   const [deleteModal, setDeleteModal] = useState({
     loading: false,
@@ -48,17 +48,17 @@ const DashboardCard = ({ data }) => {
   console.log(data);
   console.log(userData);
 
-  const mappedStory = () => {
-    let story = data.story;
-    if (story.length > 50) {
-      let trimmedStory = story.slice(0, 50);
+  // const mappedStory = () => {
+  //   let story = data.story;
+  //   if (story.length > 50) {
+  //     let trimmedStory = story.slice(0, 50);
 
-      setStoryData(() => ({
-        above50: true,
-        displayedData: `${trimmedStory}...`,
-      }));
-    }
-  };
+  //     setStoryData(() => ({
+  //       above50: true,
+  //       displayedData: `${trimmedStory}...`,
+  //     }));
+  //   }
+  // };
 
   const date = new Date(data.createdAt);
   let month;
@@ -167,9 +167,9 @@ const DashboardCard = ({ data }) => {
     }
   };
 
-  useEffect(() => {
-    mappedStory();
-  }, []);
+  // useEffect(() => {
+  //   mappedStory();
+  // }, []);
   return (
     <div className="dashboardCard">
       {deleteModal.loading ? (
