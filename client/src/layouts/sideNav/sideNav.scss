@@ -1,0 +1,95 @@
+@use "../../styles" as *;
+
+.sideNav {
+  position: fixed;
+  width: 200px;
+  height: 100vh;
+  left: -100%;
+  top: 0;
+  display: flex;
+  transition: 0.3s ease-in-out;
+  z-index: 112;
+
+  &.show {
+    left: 0;
+  }
+
+  .sideNav__bg {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: -100%;
+    background-color: rgba($primaryBg, 60%);
+    transition: 0.3s ease-in-out;
+    opacity: 0;
+
+    &.show {
+      left: 0;
+      z-index: 10;
+      opacity: 1;
+    }
+  }
+
+  .sideNav__container {
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    padding: 80px 0;
+    background-color: darken($primaryBg, 20%);
+    z-index: 11;
+  }
+
+  .sideNav__icon {
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    cursor: pointer;
+    height: 30px;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      color: $orangeColor;
+      border-radius: 50%;
+      background-color: $whiteColor;
+    }
+  }
+
+  .sideNav__link {
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.137);
+
+    &:last-child {
+      padding: 10px 0;
+    }
+
+    &.active {
+      a {
+        background-color: $whiteColor;
+        color: $orangeColor;
+      }
+    }
+
+    a {
+      padding: 10px 0;
+      color: $whiteColor;
+      display: block;
+      transition: 0.4s ease-in-out;
+    }
+    &:hover {
+      background-color: $whiteColor;
+      color: $orangeColor;
+
+      a {
+        color: $orangeColor;
+      }
+    }
+  }
+}

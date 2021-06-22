@@ -1,0 +1,17 @@
+@use "../../styles/" as *;
+
+.dashboard {
+  background-color: $primaryBg;
+  color: $whiteColor;
+  padding-top: 105px;
+
+  .dashboard__body {
+    display: flex;
+    justify-content: center;
+    min-height: calc(100vh - 120px);
+  }
+
+  .dashboard__bodyContainer {
+    width: 85%;
+  }
+}

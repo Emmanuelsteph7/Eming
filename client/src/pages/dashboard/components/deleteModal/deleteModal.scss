@@ -1,0 +1,22 @@
+@use "../../../../styles" as *;
+
+.deleteModal {
+  background-color: $whiteColor;
+  padding: 20px;
+  border-radius: 15px;
+
+  .deleteModal__header {
+    text-align: center;
+    margin-bottom: 15px;
+    color: $primaryBg;
+  }
+  .deleteModal__btns {
+    display: flex;
+
+    .button {
+      &:nth-child(1) {
+        margin-right: 10px;
+      }
+    }
+  }
+}

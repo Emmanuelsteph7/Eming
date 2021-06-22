@@ -1,0 +1,37 @@
+@use "../../styles" as *;
+
+a {
+  color: white;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  background-color: $primaryBgDark;
+  color: $whiteColor;
+  font-size: 1.3rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    background-color: $orangeColor;
+    color: $whiteColor;
+  }
+
+  &#{--full} {
+    width: 100%;
+  }
+
+  .button__icon {
+    margin-right: 10px;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+  }
+}

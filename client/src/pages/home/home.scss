@@ -1,0 +1,106 @@
+@use "../../styles" as *;
+
+.home {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  .home__container {
+    width: 90%;
+    display: flex;
+    height: 100%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home__body {
+    height: 40%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .home__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home__listItem {
+    margin-bottom: 20px;
+  }
+
+  .home_login {
+    display: flex;
+    justify-content: center;
+  }
+
+  // .home__welcome {
+  //   width: 50%;
+  //   height: 100%;
+  //   display: flex;
+  //   justify-content: flex-start;
+  //   align-items: center;
+  // }
+
+  // .home__info {
+  //   display: flex;
+  //   flex-direction: column;
+  // }
+
+  // .home__header {
+  //   color: white;
+  //   margin-bottom: 40px;
+  //   font-size: 3rem;
+  // }
+
+  // .home__headings {
+  //   display: flex;
+  //   flex-direction: column;
+  // }
+
+  // .home__headingsText {
+  //   font-size: 2.5rem;
+  //   color: white;
+  // }
+
+  // .home__btnContainer {
+  //   margin-top: 20px;
+  // }
+
+  // .home__btn {
+  //   background-color: rgb(18, 36, 75);
+  //   color: white;
+  //   border: none;
+  //   outline: none;
+  //   display: flex;
+  //   align-items: center;
+  //   font-size: 1.6rem;
+  //   padding: 10px 20px;
+
+  //   svg {
+  //     margin-right: 10px;
+  //   }
+  // }
+
+  // .home__login {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   width: 50%;
+  // }
+
+  // .home__form {
+  //   background-color: rgba(255, 255, 255, 0.5);
+  //   border-radius: 10px;
+  //   width: 60%;
+  //   display: flex;
+  //   justify-content: center;
+  //   flex-direction: column;
+  //   align-items: center;
+  //   box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  // }
+}
