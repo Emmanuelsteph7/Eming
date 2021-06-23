@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Plus from "../../components/plus/Plus";
+
 import ProtectedRoute from "../../components/protectedRoute/ProtectedRoute";
 import Header from "../../layouts/header/Header";
 import { useRouteMatch, Switch } from "react-router-dom";
@@ -48,7 +48,6 @@ const Dashboard = () => {
             </Switch>
           </div>
         </main>
-        <Plus path="/dashboard/add-stories" />
       </div>
     </>
   );
