@@ -146,7 +146,7 @@ const DashboardCard = ({ data }) => {
     }));
     try {
       const deletedStory = await axios.delete(
-        `http://localhost:5000/stories/delete/${data._id}`
+        `https://eming.herokuapp.com/stories/delete/${data._id}`
       );
 
       if (deletedStory) {

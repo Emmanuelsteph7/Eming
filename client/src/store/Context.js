@@ -12,7 +12,7 @@ const GeneralContext = (props) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/getUser", { withCredentials: true })
+      .get("https://eming.herokuapp.com//getUser", { withCredentials: true })
       .then((res) => {
         if (res.data) {
           setUserData(() => ({

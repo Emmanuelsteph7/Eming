@@ -6,7 +6,7 @@ import Button from "../../../../components/button/Button";
 
 const MainDisplay = () => {
   const googleAuth = () => {
-    window.open("http://localhost:5000/auth/google", "_self");
+    window.open("https://eming.herokuapp.com/auth/google", "_self");
   };
   return (
     <div className="mainDisplay">

@@ -71,7 +71,7 @@ const EditPage = ({ id }) => {
       };
 
       const res = await axios.put(
-        `http://localhost:5000/stories/edit/${id}`,
+        `https://eming.herokuapp.com/stories/edit/${id}`,
         updatedBody,
         config,
         { withCredentials: true }

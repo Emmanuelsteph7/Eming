@@ -15,7 +15,7 @@ const DashboardPage = () => {
 
   const fetchStories = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/getStories", {
+      const res = await axios.get("https://eming.herokuapp.com/getStories", {
         withCredentials: true,
       });
       setStories(() => ({

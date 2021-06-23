@@ -51,7 +51,7 @@ const AddStories = ({ show, func }) => {
       };
 
       const res = await axios.post(
-        "http://localhost:5000/stories",
+        "https://eming.herokuapp.com/stories",
         body,
         config,
         { withCredentials: true }

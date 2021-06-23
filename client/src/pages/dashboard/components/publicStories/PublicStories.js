@@ -24,9 +24,12 @@ const PublicStories = () => {
 
   const fetchPublicStories = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/stories/public", {
-        withCredentials: true,
-      });
+      const res = await axios.get(
+        "https://eming.herokuapp.com//stories/public",
+        {
+          withCredentials: true,
+        }
+      );
 
       setPublicStories(() => ({
         loading: false,
