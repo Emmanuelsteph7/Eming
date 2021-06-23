@@ -31,7 +31,7 @@ const GeneralContext = (props) => {
   }, []);
 
   const logout = async () => {
-    const res = await axios.get("http://localhost:5000/auth/logout", {
+    const res = await axios.get("https://eming.herokuapp.com/auth/logout", {
       withCredentials: true,
     });
 
