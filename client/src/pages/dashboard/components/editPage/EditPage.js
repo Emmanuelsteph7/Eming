@@ -94,7 +94,9 @@ const EditPage = ({ id }) => {
   useEffect(() => {
     const fetchSpecificStory = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/stories/edit/${id}`);
+        const res = await axios.get(
+          `https://eming.herokuapp.com/stories/edit/${id}`
+        );
 
         setStory((prevState) => ({
           ...prevState,
